@@ -6,12 +6,12 @@ from tree_sitter import Language, Parser
 
 app = Flask(__name__)
 
-Language.build_library(
- 	'build/my-languages.so',
- 	[
- 		'vendor/tree-sitter-python'
- 	]
-)
+#Language.build_library(
+# 	'build/my-languages.so',
+# 	[
+# 		'vendor/tree-sitter-python'
+# 	]
+#)
 
 # PY_LANGUAGE = Language('build/my-languages.so', 'python')
 # parser = Parser()
