@@ -12,7 +12,6 @@ Language.build_library(
  		'vendor/tree-sitter-python'
  	]
 )
-print("HELLO WORLD")
 # PY_LANGUAGE = Language('build/my-languages.so', 'python')
 # parser = Parser()
 # parser.set_language(PY_LANGUAGE)
