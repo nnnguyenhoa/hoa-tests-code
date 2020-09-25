@@ -27,10 +27,10 @@ RUN apt-get install -y \
 
 RUN pip3 install -r requirements.txt
 
-CMD git clone https://github.com/tree-sitter/tree-sitter-python vendor/tree-sitter-python/
+RUN git clone https://github.com/tree-sitter/tree-sitter-python vendor/tree-sitter-python/
 
-CMD cd vendor/tree-sitter-python/
+WORKDIR "vendor/tree-sitter-python/"
 
-CMD git checkout 58f57240834d6b88624e32ad0ab9531d55fb7a5d
+RUN git checkout 58f57240834d6b88624e32ad0ab9531d55fb7a5d
 
-CMD cd ../../
+WORKDIR ../../
