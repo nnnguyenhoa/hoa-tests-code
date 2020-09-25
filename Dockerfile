@@ -27,4 +27,4 @@ RUN apt-get install -y \
 
 RUN pip3 install -r requirements.txt
 
-RUN source venv/bin/activate
+CMD source venv/bin/activate
