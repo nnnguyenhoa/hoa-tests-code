@@ -27,7 +27,7 @@ RUN apt-get install -y \
 
 RUN pip3 install -r requirements.txt
 
-RUN git clone https://github.com/tree-sitter/tree-sitter-python vendor/tree-sitter-python
+RUN git clone https://github.com/tree-sitter/tree-sitter-python vendor/
 
 CMD cd vendor/tree-sitter-python/
 
