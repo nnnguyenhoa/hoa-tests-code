@@ -19,7 +19,7 @@ def normalLookUp(node, input_index, filebyte):
 
 			#break at leaf whose scope contains input index
 			if (len(child.children) == 0 and
-			child.start_byte <= input_index < child.end_byte):
+			child.start_byte <= input_index < child.end_byte):	
 				return words
 
 			#if there is an identifier before the input index

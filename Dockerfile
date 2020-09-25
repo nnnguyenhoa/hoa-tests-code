@@ -27,4 +27,4 @@ RUN apt-get install -y \
 
 RUN pip3 install -r requirements.txt
 
-EXPOSE 5000
+RUN source venv/bin/activate
