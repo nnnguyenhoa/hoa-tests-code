@@ -3,6 +3,9 @@ credentials.json
 config.py
 imageAddTest.py
 venv/
+notes/
+test2.py
+test.py
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
