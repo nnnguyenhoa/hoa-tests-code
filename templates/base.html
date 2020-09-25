@@ -1,0 +1,28 @@
+<html>
+	<head>
+		<title>
+
+		    {% block title %}
+		        nnnguyenhoa
+		    {% endblock %}
+
+	    </title>
+	    <!--<meta http-equiv="refresh" content="5">-->
+	    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="HandheldFriendly" content="true">
+		<meta name="google-site-verification" content="TyFHW3aiNSqK98xIPBn-KtDUa_cENEu7ODafXOafYJo" />
+		<meta name="keywords" content="Hoa Nguyen,Software Engineer,Software Developer,Linguistics,Linguist,UCSC,University of California, Santa Cruz, Hoa Thi Nguyen, nnnguyenhoa@yahoo.com, nnnguyenhoa, NLP, Natural Language Processing, Machine Learning, Computational Linguistics, Artificial Intelligence, AI">
+		<link rel="stylesheet" type="text/css" href="../static/stylesheet.css"/>
+	</head>
+	<body>
+
+	    {% include 'banner.html' %}
+
+	    {% block content %}
+	    {% endblock %}
+
+	    {% include 'footer.html' %}
+
+	</body>
+</html>

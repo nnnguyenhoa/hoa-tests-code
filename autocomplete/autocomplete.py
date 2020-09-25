@@ -1,6 +1,7 @@
 #downloaded libc++-7-dev, libc++-dev, libc++abi-7-dev
 #already had libc++1, libc++1-7
 #pip install wheel
+#Werkzeug==1.0.1
 from tree_sitter import Language, Parser
 from helper import *
 from lookup import *

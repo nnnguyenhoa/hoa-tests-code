@@ -5,7 +5,8 @@ venv/
 notes/
 autocomplete/test2.py
 autocomplete/test.py
-autocomplete/vendor/
+vendor/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

@@ -1,5 +1,28 @@
 <html>
-	<body>
-		<h1> Hello World! </h1>
-	</body>
-</html>
+<link rel="stylesheet" type="text/css" href="../static/stylesheet.css" />
+{% extends 'base.html' %}
+
+{% block title %}
+    Variable Filling
+{% endblock %}
+
+{% block content %}
+	<form class='programtext' action="" method="post">
+		<label for='program'>Program:</label><br>
+		<textarea class='program' id='program' name="program"></textarea>
+		<label for='index'>Index:</label><br>
+		<input id = 'index' class='index' name = 'index' value='-1'/>
+		<input class = 'submit' type="submit" value="submit"/>
+	</form>
+	<br>
+	<div class ="output">
+		Output:
+		<ul>
+			{% for i in list %}
+				<li>{{ i }}</li>
+			{% endfor%}
+		</ul>
+	</div>
+	<script type="text/javascript" src="{{url_for('static', filename='autocomplete.js')}}"></script>
+	</from>
+{% endblock %}
