@@ -29,4 +29,8 @@ RUN pip3 install -r requirements.txt
 
 RUN git clone https://github.com/tree-sitter/tree-sitter-python vendor/tree-sitter-python
 
-# CMD source venv/bin/activate
+CMD cd vendor/tree-sitter-python/
+
+RUN git checkout 58f57240834d6b88624e32ad0ab9531d55fb7a5d
+
+CMD cd ../../
