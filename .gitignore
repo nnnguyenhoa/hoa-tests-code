@@ -1,11 +1,11 @@
-Dockerfile
 credentials.json
 config.py
 imageAddTest.py
 venv/
 notes/
-test2.py
-test.py
+autocomplete/test2.py
+autocomplete/test.py
+autocomplete/vendor/
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

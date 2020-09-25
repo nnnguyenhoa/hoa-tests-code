@@ -36,7 +36,7 @@ if __name__ == "__main__":
 	filestr = file.read()
 	filestr = filestr[:INPUT_INDEX] + "placeholder" + filestr[INPUT_INDEX:]
 	file.close()
-	print(filestr)
+	#print(filestr)
 	
 	#use the parser to parse the file into a syntax tree
 	filebyte = bytes(filestr, "utf8")
@@ -51,7 +51,7 @@ if __name__ == "__main__":
 	
 	#check if the missing variable is a special case
 	special_case = findSpecialCase(cursor, INPUT_INDEX)
-	print(special_case)
+	#print(special_case)
 	
 	#for each special case, call a special lookup function
 	#return the list of possible identifiers

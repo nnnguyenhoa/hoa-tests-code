@@ -92,7 +92,7 @@ def objectSearch(node, input_index, filebyte):
 				else:
 					continue
 			
-			if child.type in special_cases:
+			if(child.end_byte < input_index and child.type in special_cases):
 				continue
 			#if the current node is an attribute, add the object part
 			#make sure it's not our placeholder
@@ -137,7 +137,7 @@ def objectSearch(node, input_index, filebyte):
 					return words
 				
 				
-				if child.type in special_cases:
+				if(child.end_byte < input_index and child.type in special_cases):
 					continue
 
 				#if the current node is an attribute, add the object part
@@ -209,12 +209,6 @@ def attrSearch(node, input_index, filebyte):
 						words.add(name)
 						continue
 				
-				#do not traverse through subtrees with
-				#identifiers outside the scope of the
-				#input index
-				if child.type in special_cases:
-					continue
-
 				#if an attribute variable has been found, add the
 				#attribute of the object
 				#Make sure it isnt the placeholder
@@ -224,6 +218,7 @@ def attrSearch(node, input_index, filebyte):
 					if not (child.start_byte <= input_index < child.end_byte):
 						word = (filebyte[granchild.start_byte:granchild.end_byte]).decode("utf-8")
 						words.add(word)
+
 				queue.append(child)
 			curr_node = queue.pop(0)
 	#if the missing attribute variable is not within a class definition
@@ -250,7 +245,7 @@ def attrSearch(node, input_index, filebyte):
 				#do not traverse through subtrees with
 				#identifiers outside the scope of the
 				#input index
-				if child.type in special_cases:
+				if(child.end_byte < input_index and child.type in special_cases):
 					continue
 				queue.append(child)
 			curr_node = queue.pop(0)
